@@ -27,7 +27,6 @@ jobs:
         with:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: ${{fromJSON(github.event.inputs.scan_params).registry_module}}
-          BOOST_DIFF_SCAN_TIMEOUT: 1200
         env:
           BOOST_GIT_HEAD: ${{fromJSON(github.event.inputs.scan_params).head_sha}}
           BOOST_GIT_BASE: ${{fromJSON(github.event.inputs.scan_params).base_sha}}
